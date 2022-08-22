@@ -2,27 +2,18 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-const { response, application } = require("express");
 const bcryptjs = require("bcryptjs");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
 app.use(cors());
+app.use(express.urlencoded({extended: true}))
 app.use(express.json());
 const path = require("path");
+const connectDB = require("./config/db");
 //Mongo URI
 
-const mongoURL = process.env.MONGO_URI;
-//connecting database
-mongoose
-  .connect(mongoURL, {
-    useNewUrlParser: true,
-  })
-  .then(() => {
-    console.log("Database connected");
-  })
-  .catch((e) => console.log(e));
-
+connectDB()
 //Register user
 
 require("./models/usermodel");
@@ -130,23 +121,6 @@ app.get("/gettweets", async (req, res) => {
   }).sort({ date: -1 });
 });
 
-// app.get("/tweetdata").get((req, res) => {
-//   Tweet.find().then((foundtweet) => res.json(foundtweet));
-//   console.log(foundtweet);
-// });
-
-// app.post("/addtweet", async (req, res) => {
-//   const { name, phonenumber, img, tweet } = req.body;
-//   Tweet.create({
-//     name,
-//     phonenumber,
-//     img,
-//     tweet,
-//   });
-//   res.send({ status: "ok" });
-// });
-
-//server port
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("myapp/build"));
