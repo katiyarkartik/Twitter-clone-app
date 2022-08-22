@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
+const colors = require("colors");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const bcryptjs = require("bcryptjs");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
+app.use(morgan('dev'))
 app.use(cors());
 app.use(express.urlencoded({extended: true}))
 app.use(express.json());
@@ -134,5 +137,5 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, (req, res) => {
-  console.log("running on port 8000");
+  console.log(`server running in ${process.env.NODE_ENV} on port ${PORT}`.yellow.inverse);
 });
