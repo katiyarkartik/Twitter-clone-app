@@ -1,0 +1,66 @@
+.tweetcard{
+  
+    width: 100%;
+    
+    color: white;
+  
+}
+.tweet-data{
+    padding: 15px 0 ;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.user-pic{
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+ 
+}
+.user-pic img{
+    width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+.user-tag{
+margin-left: 20px;
+font-size: 20px;
+margin-top: 4px;
+}
+.user-tweet{
+    min-height: 50px;
+    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.like{
+    margin-left: 20px;
+}
+.hr-bottom{
+    
+    width: 100%;
+    height: 1px;
+    background-color: #484b4e;
+}
+.tweet-img{
+ 
+    width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+    height: auto;
+}
+.tweet-img img{
+    width: 100%;
+}
+.like-comment{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #888c8f;
+}

@@ -1,0 +1,129 @@
+*{
+    margin: 0%;
+    padding: 0%;
+  box-sizing: border-box;
+}
+.login-container{
+
+    display: flex;
+  
+}
+.login-left{
+    width: 54%;
+    background-color:#1DA1F2;
+  height: 100vh;
+  padding-top: 150px;
+}
+.login-right{
+    width: 46%;
+    background-color: #14171A;
+    height: 100vh;
+    
+    height: "full";
+}
+.twitter-logo-login{
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 300px;
+    color: white;
+    background-color: aquamarine;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.login-left{
+    font-size: 350px;
+    padding: 140px 0;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    color: white;
+    text-align: center;
+
+}
+.login-right{
+    color: white;
+    padding: 40px;
+    
+}
+.login-right-twitter-logo{
+    font-size: 42px;
+}
+.login-h1{
+    padding-top: 50px;
+    font-size: 64px;
+    
+}
+.login-h2{
+    padding-top: 40px;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.signup{
+    margin-top: 10px;
+}
+button{
+
+    border-radius: 100px;
+    padding: 7px;
+    width: 300px;
+    background-color: white;
+}
+.signup-contents{
+   display: flex;
+   
+   width: 200px;
+   font-size: 20px;
+   margin-left: auto;
+   margin-right: auto;
+
+   
+}
+.signup-logo{
+   font-size: 20px;
+   margin-top: 2px;
+}
+.signup-title{
+    font-size: 16px;
+    color: #657786;
+margin: auto 0;
+
+margin-left: 10px;
+}
+
+.phone button{
+    background-color: #1DA1F2;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+}
+.tc{
+    color: #1DA1F2;
+}
+.signup-login{
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.signin-btn{
+    margin-top: 20px;
+}
+.signin-btn button{
+    padding: 10px;
+    color:#1DA1F2;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #14171A;
+    border: 1px #AAB8C2 solid;
+}
+@media only screen and (max-width: 850px) {
+    .login-left{
+        width: 0%;
+    }
+    .login-right{
+        width: 100%;
+    }
+  }
